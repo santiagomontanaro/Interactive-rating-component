@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frontend Mentor | Interactive rating component</title>
+  <link rel="shortcut icon" href="./src/images/favicon-32x32.png" type="image/x-icon">
+  <link rel="stylesheet" href="./src/scss/main.css">
+</head>
+
+<body>
+
+  <main class="component">
+    <!-- rating card -->
+    <div class="component__rateCard">
+      <img src="./src/images/icon-star.svg" alt="star-icon" class="rateCard__svg">
+      <div class="rateCard__supports">
+        <h1>How did we do?</h1>
+        <p>Please let us know how we did with your support request. All feedback is appreciated to help us improve our
+          offering!</p>
+      </div>
+      <div class="rateCard__rating">
+        <div class="rating">
+          <span class="num">1</span>
+        </div>
+        <div class="rating">
+          <span class="num">2</span>
+        </div>
+        <div class="rating">
+          <span class="num">3</span>
+        </div>
+        <div class="rating">
+          <span class="num">4</span>
+        </div>
+        <div class="rating">
+          <span class="num">5</span>
+        </div>
+      </div>
+      <div class="rateCard__submit">
+        <span style="text-transform: uppercase;">submit</span>
+      </div>
+    </div>
+    <!-- thanks card -->
+    <div class="component__feedbackCard">
+      <img src="./src/images/illustration-thank-you.svg" alt="thanks-svg-icon" class="feedbackCard__svg">
+      <div class="feedbackCard__rated">
+        <p class="rated__rate"></p>
+      </div>
+      <div class="feedbackCard__thanks">
+        <h1>Thank you!</h1>
+        <p>We appreciate you taking the time to give a rating. If you ever need more support, don't hesitate to get in
+          touch!</p>
+      </div>
+    </div>
+  </main>
+
+  <script src="./src/script/script.js"></script>
+
+</body>
+
+</html>

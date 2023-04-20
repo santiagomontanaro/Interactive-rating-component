@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+/* primary colors */
+/* neutral colors */
+/* font */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+                                supported by Chrome, Edge, Opera and Firefox */
+}
+
+body {
+  color: hsl(0, 0%, 100%);
+  font-size: 15px;
+  font-family: "Overpass", sans-serif;
+  background-color: hsl(216, 12%, 8%);
+}
+body .component {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2em;
+  min-height: 100vh;
+  /* rating card component */
+  /* thanks card component */
+}
+body .component h1 {
+  font-size: 1.45rem;
+}
+body .component .component__rateCard {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.8em;
+  padding: 2em;
+  align-items: flex-start;
+  border-radius: 20px;
+  background-color: hsl(213, 19%, 18%);
+}
+body .component .component__rateCard .rateCard__svg {
+  padding: 0.8em;
+  border-radius: 50%;
+  background-color: hsla(217, 12%, 63%, 0.124);
+}
+body .component .component__rateCard .rateCard__supports p {
+  color: hsl(217, 12%, 63%);
+  font-size: 0.85rem;
+  margin-top: 0.8rem;
+  line-height: 1.4rem;
+}
+body .component .component__rateCard .rateCard__rating {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+}
+body .component .component__rateCard .rateCard__rating .rating {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  color: hsl(217, 12%, 63%);
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  padding: 1em;
+  border-radius: 50%;
+  background-color: hsla(217, 12%, 63%, 0.124);
+}
+body .component .component__rateCard .rateCard__rating .rating span {
+  top: 2px;
+  position: relative;
+}
+body .component .component__rateCard .rateCard__rating .rating:hover {
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(25, 97%, 53%);
+}
+body .component .component__rateCard .rateCard__rating .active {
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(217, 12%, 63%);
+}
+body .component .component__rateCard .rateCard__submit {
+  color: hsl(0, 0%, 100%);
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  padding: 1em;
+  font-size: 0.9em;
+  text-align: center;
+  font-weight: 600;
+  font-family: "Overpass", sans-serif;
+  border-radius: 25px;
+  letter-spacing: 0.15rem;
+  background-color: hsl(25, 97%, 53%);
+}
+body .component .component__rateCard .rateCard__submit span {
+  top: 1px;
+  position: relative;
+}
+body .component .component__rateCard .rateCard__submit:active {
+  color: hsl(25, 97%, 53%);
+  background-color: hsl(0, 0%, 100%);
+}
+body .component .component__feedbackCard {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.8em;
+  padding: 2em;
+  align-items: flex-start;
+  border-radius: 20px;
+  background-color: hsl(213, 19%, 18%);
+  text-align: center;
+  align-items: center;
+}
+body .component .component__feedbackCard .feedbackCard__rated {
+  color: hsl(25, 97%, 53%);
+  padding: 0.5em 1em;
+  border-radius: 18px;
+  background-color: hsla(217, 12%, 63%, 0.124);
+}
+body .component .component__feedbackCard .feedbackCard__thanks {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+body .component .component__feedbackCard .feedbackCard__thanks p {
+  color: hsl(217, 12%, 63%);
+  font-size: 0.85rem;
+  margin-top: 0.8rem;
+  line-height: 1.4rem;
+}
+
+/* media query desktop */
+@media (min-width: 768px) {
+  .component .component__rateCard {
+    width: 380px;
+  }
+  .component .component__feedbackCard {
+    width: 380px;
+  }
+}/*# sourceMappingURL=main.css.map */

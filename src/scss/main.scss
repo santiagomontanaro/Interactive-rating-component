@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+/* primary colors */
+$orange: hsl(25, 97%, 53%);
+
+/* neutral colors */
+$White              : hsl(0, 0%, 100%);
+$Dark-Blue          : hsl(213, 19%, 18%);
+$Light-Grey         : hsl(217, 12%, 63%);
+$Medium-Grey        : hsl(216, 12%, 54%);
+$Very-Dark-Blue     : hsl(216, 12%, 8%);
+$Light-Grey-greyish : hsla(217, 12%, 63%, 0.124);
+
+/* font */
+$overpass-font: 'Overpass',
+sans-serif;
+
+@mixin flex() {
+    display        : flex;
+    align-items    : center;
+    flex-direction : column;
+    justify-content: center;
+}
+
+@mixin mainStyleCard() {
+    gap             : 1.8em;
+    padding         : 2em;
+    align-items     : flex-start;
+    border-radius   : 20px;
+    background-color: $Dark-Blue;
+}
+
+@mixin p() {
+    color      : $Light-Grey;
+    font-size  : .85rem;
+    margin-top : .8rem;
+    line-height: 1.4rem;
+}
+
+* {
+    margin               : 0;
+    padding              : 0;
+    box-sizing           : border-box;
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select  : none;
+    /* Safari */
+    -khtml-user-select   : none;
+    /* Konqueror HTML */
+    -moz-user-select     : none;
+    /* Old versions of Firefox */
+    -ms-user-select      : none;
+    /* Internet Explorer/Edge */
+    user-select          : none;
+    /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+body {
+    color           : $White;
+    font-size       : 15px;
+    font-family     : $overpass-font;
+    background-color: $Very-Dark-Blue;
+
+    .component {
+        @include flex();
+        padding   : 2em;
+        min-height: 100vh;
+
+        h1 {
+            font-size: 1.45rem;
+        }
+
+        /* rating card component */
+        .component__rateCard {
+            @include flex();
+            @include mainStyleCard();
+
+            .rateCard__svg {
+                padding         : .8em;
+                border-radius   : 50%;
+                background-color: $Light-Grey-greyish;
+            }
+
+            .rateCard__supports {
+
+                p {
+                    @include p();
+                }
+            }
+
+            .rateCard__rating {
+                @include flex();
+                width          : 100%;
+                flex-direction : row;
+                justify-content: space-between;
+
+                .rating {
+                    @include flex();
+                    color           : $Light-Grey;
+                    width           : 40px;
+                    height          : 40px;
+                    cursor          : pointer;
+                    padding         : 1em;
+                    border-radius   : 50%;
+                    background-color: $Light-Grey-greyish;
+
+                    span {
+                        top     : 2px;
+                        position: relative;
+                    }
+
+                    &:hover {
+                        color           : $White;
+                        background-color: $orange;
+                    }
+
+                }
+
+                .active {
+                    color           : $White;
+                    background-color: $Light-Grey;
+                }
+            }
+
+            .rateCard__submit {
+                color           : $White;
+                width           : 100%;
+                border          : none;
+                cursor          : pointer;
+                padding         : 1em;
+                font-size       : .9em;
+                text-align      : center;
+                font-weight     : 600;
+                font-family     : $overpass-font;
+                border-radius   : 25px;
+                letter-spacing  : .15rem;
+                background-color: $orange;
+
+                span {
+                    top     : 1px;
+                    position: relative;
+                }
+
+                &:active {
+                    color           : $orange;
+                    background-color: $White;
+                }
+            }
+        }
+
+        /* thanks card component */
+        .component__feedbackCard {
+            @include flex();
+            @include mainStyleCard();
+            text-align : center;
+            align-items: center;
+
+            .feedbackCard__rated {
+                color           : $orange;
+                padding         : .5em 1em;
+                border-radius   : 18px;
+                background-color: $Light-Grey-greyish;
+            }
+
+            .feedbackCard__thanks {
+                @include flex();
+
+                p {
+                    @include p();
+                }
+            }
+        }
+    }
+}
+
+/* media query desktop */
+@media (min-width: 768px) {
+    .component {
+        .component__rateCard {
+            width: 380px;
+        }
+
+        .component__feedbackCard {
+            width: 380px;
+        }
+    }
+}
